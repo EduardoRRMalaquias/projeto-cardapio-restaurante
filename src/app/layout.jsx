@@ -1,3 +1,4 @@
+import Banner from '@/components/Banner/Banner';
 import './globals.css';
 
 export const metadata = {
@@ -8,7 +9,10 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="pt-br">
-      <body className={``}>{children}</body>
+      <body className="container">
+        <Banner />
+        {children}
+      </body>
     </html>
   );
 }

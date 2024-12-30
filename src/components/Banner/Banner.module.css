@@ -1,0 +1,24 @@
+.banner {
+  height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url('/banner.png');
+  text-align: center;
+}
+
+.cabecalho {
+  max-width: 50%;
+}
+
+.cabecalho h1 {
+  color: var(--cor-0);
+  font-size: 48px;
+  text-shadow: 0px -4px 10px var(--cor-p);
+}
+
+.cabecalho p {
+  color: var(--cor-p);
+  font-size: 32px;
+  font-family: 'Dancing Script', cursive;;
+}
