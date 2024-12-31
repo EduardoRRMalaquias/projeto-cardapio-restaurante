@@ -1,0 +1,31 @@
+.campo {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 10px;
+  padding: 10px;
+  border: 2px solid var(--cor-1);
+  border-radius: 32px;
+}
+
+.campo img {
+  width: 30px;
+}
+
+.campo:has(.busca:focus) {
+  border: 2px solid var(--cor-2);
+}
+
+.busca {
+  border: none;
+  font-size: 14px;
+}
+
+.busca:focus {
+  border: none;
+  outline: none;
+}
+
+.busca::placeholder {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+}

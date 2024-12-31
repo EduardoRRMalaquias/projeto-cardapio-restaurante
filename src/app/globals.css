@@ -19,7 +19,18 @@ body {
   /* font-family: 'Dancing Script', cursive; */
 }
 
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+ul {
+  list-style: none;
+}
+
 .container {
   max-width: 1024px;
   margin: 0 auto;
+  padding: 0 12px;
 }
