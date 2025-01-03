@@ -29,7 +29,7 @@ import saladaWaldorf from '/public/salada-waldorf.jpg';
 import saladaGrega from '/public/salada-grega.jpg';
 import saladaNicoise from '/public/salada-nicoise.jpg';
 
-export const produtos = [
+const pratos = [
   {
     id: 1,
     nome: 'Espaguete',
@@ -300,3 +300,5 @@ export const produtos = [
     imagem: saladaNicoise,
   },
 ];
+
+export default pratos;

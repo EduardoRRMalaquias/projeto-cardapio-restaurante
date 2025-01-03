@@ -1,1 +1,20 @@
+.cardapio {
+  margin: 40px 0;
+}
 
+.cardapio h2 {
+  text-align: center;
+  font-family: 'Dancing Script', cursive;
+  font-size: 32px;
+  color: var(--cor-p);
+  margin-bottom: 10px;
+}
+
+.pratos {
+  background-color: var(--cor-1);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding: 20px;
+  border-radius: 8px;
+}

@@ -1,0 +1,30 @@
+.card {
+  flex: 1 0 250px;
+  display: flex;
+  flex-direction: column;
+  border: 2px solid var(--cor-p);
+  border-radius: 4px;
+}
+
+.card figure img {
+  max-height: 250px;
+  object-fit: cover;
+}
+
+.informacoes {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 10px;
+  flex: 1 0 150px;
+  gap: 6px;
+}
+
+.informacoes small {
+  font-weight: 500;
+  color: var(--cor-p);
+}
+
+.informacoes span {
+  margin-left: auto;
+}
