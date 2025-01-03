@@ -1,5 +1,6 @@
 import Banner from '@/components/Banner/Banner';
 import './globals.css';
+import Footer from '@/components/Footer/Footer';
 
 export const metadata = {
   title: 'Cardapio de Restaurante',
@@ -12,6 +13,7 @@ export default function RootLayout({ children }) {
       <body className="container">
         <Banner />
         {children}
+        <Footer />
       </body>
     </html>
   );
