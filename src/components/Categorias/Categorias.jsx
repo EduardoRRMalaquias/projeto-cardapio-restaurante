@@ -1,6 +1,7 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import estilos from './Categorias.module.css';
 import BotaoCategorias from '../BotaoCategorias/BotaoCategorias';
+import { filtrarPrato } from '../../service/service';
 
 /* Imagens */
 import entrada from '../../../public/entrada.png';
@@ -10,9 +11,9 @@ import bebidas from '../../../public/bebidas.png';
 import saladas from '../../../public/salada.png';
 import sobremesas from '../../../public/sobremesa.png';
 
-const categorias = [
+const listaCategorias = [
   {
-    categoria: 'Entrada',
+    categoria: 'Entradas',
     image: entrada,
   },
   {
@@ -37,13 +38,29 @@ const categorias = [
   },
 ];
 
-const Categorias = () => {
+const Categorias = ({ setListaPratos, setValue }) => {
+  const [categorias, setCategoria] = useState('Entradas');
+
+  useEffect(() => {
+    setValue('');
+    setListaPratos(filtrarPrato(categorias));
+  }, [categorias]);
+
+  const mudarCategoria = (categoria) => {
+    setCategoria(categoria);
+  };
+
   return (
     <section aria-label="categotias">
       <ul className={estilos.categorias}>
-        {categorias.map(({ categoria, image }) => (
+        {listaCategorias.map(({ categoria, image }) => (
           <li key={categoria}>
-            <BotaoCategorias categoria={categoria} image={image} />
+            <BotaoCategorias
+              ativo={categorias === categoria}
+              categoria={categoria}
+              image={image}
+              onClick={() => mudarCategoria(categoria)}
+            />
           </li>
         ))}
       </ul>

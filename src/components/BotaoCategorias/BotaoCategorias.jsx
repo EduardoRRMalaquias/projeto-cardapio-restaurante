@@ -2,11 +2,11 @@ import React from 'react';
 import Image from 'next/image';
 import estilos from './BotaoCategorias.module.css';
 
-const BotaoCategorias = ({ categoria, image }) => {
+const BotaoCategorias = ({ categoria, image, onClick, ativo }) => {
   return (
     <button
-      className={estilos.btnCategorias}
-      onClick={() => console.log(categoria)}
+      className={`${ativo && estilos.active} ${estilos.btnCategorias}`}
+      onClick={onClick}
     >
       <Image
         className={estilos.Image}

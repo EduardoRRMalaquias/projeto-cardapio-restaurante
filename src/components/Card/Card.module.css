@@ -4,6 +4,12 @@
   flex-direction: column;
   border: 2px solid var(--cor-p);
   border-radius: 4px;
+  transition: box-shadow 0.3s;
+  cursor: pointer;
+}
+
+.card:hover {
+  box-shadow: 0px 2px 5px 3px #00000046;
 }
 
 .card figure img {
